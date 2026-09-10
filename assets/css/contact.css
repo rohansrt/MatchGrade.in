@@ -4,7 +4,7 @@
 
 .contact-section {
   padding-top: 72px;
-  background: radial-gradient(900px 400px at 15% -10%, var(--blue-100), transparent 60%);
+  background: radial-gradient(900px 420px at 12% -12%, var(--blue-100), transparent 60%);
 }
 
 .contact-grid {
@@ -37,14 +37,13 @@
 .contact-copy .banner {
   margin-top: 32px;
   font-size: 0.92rem;
-  font-weight: 500;
 }
 
-/* ---------- Contact channel rows (larger boxed icons) ---------- */
+/* ---------- Contact channel rows ---------- */
 .contact-channels {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
   margin-top: 36px;
   max-width: 500px;
 }
@@ -53,7 +52,7 @@
   display: flex;
   align-items: center;
   gap: 18px;
-  padding: 16px 20px;
+  padding: 14px 18px;
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -68,9 +67,9 @@ a.channel-row:hover {
 
 .channel-icon {
   flex-shrink: 0;
-  width: 72px;
-  height: 72px;
-  border-radius: var(--radius-md);
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
   background: var(--accent-soft);
   color: var(--accent);
   display: flex;
@@ -79,25 +78,31 @@ a.channel-row:hover {
 }
 
 .channel-icon svg {
-  width: 32px;
-  height: 32px;
+  width: 27px;
+  height: 27px;
+}
+
+.channel-icon--whatsapp {
+  background: #e6f6ec;
+  color: #1faa53;
 }
 
 .channel-text {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 3px;
 }
 
 .channel-label {
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--text-muted);
 }
 
 .channel-text strong {
-  font-size: 1.02rem;
+  font-size: 1.05rem;
   color: var(--navy-950);
+  font-weight: 700;
 }

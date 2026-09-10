@@ -3,37 +3,50 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>MatchGrade: Every Asset | Every Game | Anytime</title>
-<meta name="description" content="MatchGrade is the operating system for institutional sports. We audit, maintain, supply and manage every sports asset for schools, colleges and corporates." />
-<link rel="icon" href="assets/images/yoppi-icon.png" />
+<title>YOPPI — Experiences for a Brighter Tomorrow</title>
+<meta name="description" content="YOPPI designs meaningful experiences for schools, colleges, startups and GCCs — built around four dimensions of development: growth, wellness, connection and exposure." />
+<link rel="icon" type="image/png" sizes="any" href="assets/images/yoppi-icon-512.png?v=4" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/images/yoppi-icon-180.png?v=4" />
+<meta name="theme-color" content="#0d7cd1" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/css/base.css" />
 <link rel="stylesheet" href="assets/css/components.css" />
 <link rel="stylesheet" href="assets/css/home.css" />
-<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 </head>
 <body>
 
 <header class="site-header">
   <div class="container nav">
     <a href="index.html" class="brand">
-      <img src="assets/images/yoppi-icon.png" alt="MatchGrade" />
+      <img src="assets/images/yoppi-icon-512.png?v=4" alt="" width="46" height="46" />
       <span class="brand-text">
-        <span class="brand-name">MatchGrade</span>
-        <span class="brand-tagline">Every Asset | Every Game | Anytime</span>
+        <span class="brand-name">YOPPI</span>
+        <span class="brand-tagline">Experiences for a Brighter Tomorrow</span>
       </span>
     </a>
     <nav class="nav-links">
       <a href="index.html" class="active">Home</a>
-      <a href="services.html">Services/Plans</a>
-      <a href="contact.html">Contact Us</a>
-      <button type="button" class="nav-links-login" data-login-trigger>Login</button>
+      <div class="nav-item has-menu">
+        <button type="button" class="nav-menu-toggle" aria-expanded="false" aria-controls="offerings-menu">
+          Offerings
+          <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-menu" id="offerings-menu">
+          <a href="offerings.html#schools" data-pillar="growth">Schools<small>Learning beyond the classroom</small></a>
+          <a href="offerings.html#colleges" data-pillar="exposure">Colleges<small>From campus to what's next</small></a>
+          <a href="offerings.html#young-firms" data-pillar="connection">Young Firms<small>Happier teams, stronger journeys</small></a>
+          <a href="offerings.html#gccs" data-pillar="imagine">GCCs &amp; Captives<small>People experiences that perform</small></a>
+        </div>
+      </div>
+      <a href="contact.html">Contact</a>
     </nav>
     <div class="nav-actions">
-      <button type="button" class="btn btn-secondary" data-login-trigger>Login</button>
-      <a href="signup.html" class="btn btn-primary">Sign Up</a>
+      <a href="https://wa.me/918670990985" class="btn btn-whatsapp" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.02a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 5.83 2.42 8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.8-.79.97-.14.16-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.16 0-.43.06-.65.31-.22.25-.85.84-.85 2.04s.87 2.37 1 2.53c.12.17 1.72 2.62 4.16 3.68.58.25 1.03.4 1.39.51.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.29Z"/></svg>
+        WhatsApp Us
+      </a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -47,100 +60,289 @@
   <section class="hero">
     <div class="container hero-inner">
       <div class="hero-copy reveal is-visible">
-        <span class="pill">Sports Infrastructure as a Service</span>
-        <h1>Every Asset | <span class="text-accent">Every Game</span> | Anytime</h1>
-        <p class="hero-sub">We audit, maintain and supply sports equipment for schools, colleges and corporates. You play, we handle the rest.</p>
-        <p class="hero-mission">We're passionate about solving sports infrastructure in India, one court, one kit, one institution at a time.</p>
+        <span class="pill">Experiences for a Brighter Tomorrow</span>
+        <h1>Meaningful experiences.<span class="line-muted">For happier, more capable people.</span></h1>
+        <p class="hero-sub">YOPPI partners with schools, colleges, young firms and global capability centres to create experiences that go beyond the everyday — helping people grow, feel well, connect deeper and see a bigger world.</p>
         <div class="hero-cta">
-          <a href="dashboard.html" class="btn btn-primary btn-lg" data-login-trigger>Login</a>
-          <a href="signup.html" class="btn btn-secondary btn-lg">Sign Up Your Institution</a>
-          <a href="services.html" class="btn btn-ghost btn-lg">What We Offer</a>
+          <a href="offerings.html" class="btn btn-primary btn-lg">Explore Our Offerings</a>
+          <a href="contact.html" class="btn btn-secondary btn-lg">Meet the Founders</a>
         </div>
-        <div class="hero-flow">
-          <span>Institutions</span>
-          <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span class="flow-accent">MatchGrade Platform</span>
-          <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span>Certified Vendor Network</span>
+        <div class="hero-marks">
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Founded by alumni of IIT Roorkee, IIT Kharagpur &amp; ISB
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Running pilots across schools, campuses and GCCs
+          </span>
         </div>
       </div>
 
       <div class="hero-panel reveal is-visible">
-        <div class="panel-shot">
-          <a href="dashboard-iitkgp.html" class="panel-shot-link" aria-label="View a sample dashboard">
-            <span class="panel-shot-badge"><span class="panel-shot-dot">●</span> Live sample dashboard</span>
-            <img src="assets/images/dashboard-preview.png" alt="MatchGrade sample dashboard showing tagged assets, equipment uptime and open issues for Greenfield School" />
-          </a>
-        </div>
+        <a class="hero-tile" href="offerings.html#schools" data-pillar="growth">
+          <span class="hero-tile-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 9.2 12 5l9 4.2-9 4.2-9-4.2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M6.5 11.2v4.2c0 1.6 2.5 2.8 5.5 2.8s5.5-1.2 5.5-2.8v-4.2M20.6 9.8v5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Schools</h3>
+          <p>Learning beyond the classroom</p>
+        </a>
+        <a class="hero-tile" href="offerings.html#colleges" data-pillar="exposure">
+          <span class="hero-tile-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 20.5V9.8l8-5.3 8 5.3v10.7" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M2.5 20.5h19" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M10 20.5V14h4v6.5" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Colleges</h3>
+          <p>From campus to what's next</p>
+        </a>
+        <a class="hero-tile" href="offerings.html#young-firms" data-pillar="connection">
+          <span class="hero-tile-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3c3 2 5 5.5 5 9.5L15 18H9l-2-5.5C7 8.5 9 5 12 3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="1.9" stroke="currentColor" stroke-width="1.7"/><path d="M9 18c-1 1-1.3 2-1.1 3 1 .2 2.1-.1 3.1-1.1M15 18c1 1 1.3 2 1.1 3-1 .2-2.1-.1-3.1-1.1" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Young Firms</h3>
+          <p>Happier teams, stronger journeys</p>
+        </a>
+        <a class="hero-tile" href="offerings.html#gccs" data-pillar="imagine">
+          <span class="hero-tile-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 20.5V6.2L12 3.5v17M12 20.5h8.5V9.8L12 7.2" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M6.6 8.6h2M6.6 12h2M6.6 15.4h2M15.4 12h2M15.4 15.4h2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          </span>
+          <h3>GCCs &amp; Captives</h3>
+          <p>People experiences that perform</p>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- ================= STATS ================= -->
-  <section class="section section--tight section--alt stats-strip">
+  <!-- ================= FOUR PILLARS ================= -->
+  <section class="section section--alt">
     <div class="container">
-      <div class="grid grid-4">
-        <div class="stat reveal">
-          <span class="num">1,284+</span>
-          <span class="label">Assets tracked live</span>
+      <div class="section-head center reveal">
+        <span class="eyebrow">Every YOPPI experience is designed around</span>
+        <h2>Four Dimensions of Development</h2>
+      </div>
+      <div class="pillars reveal">
+        <div class="pillar" data-pillar="growth">
+          <span class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 20h16" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><rect x="5.5" y="12" width="3.4" height="5.2" rx="1" fill="currentColor"/><rect x="10.3" y="9" width="3.4" height="8.2" rx="1" fill="currentColor"/><rect x="15.1" y="5.5" width="3.4" height="11.7" rx="1" fill="currentColor"/><path d="M14.6 4.2h4.6v4.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Growth</h3>
+          <p>Learn, develop and become more.</p>
         </div>
-        <div class="stat reveal">
-          <span class="num">96%+</span>
-          <span class="label">Equipment uptime</span>
+        <div class="pillar" data-pillar="wellness">
+          <span class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 20.2s-3.3-1.7-3.3-5.4c0-2.7 3.3-6 3.3-6s3.3 3.3 3.3 6c0 3.7-3.3 5.4-3.3 5.4Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M12 20.2c-3.7 0-6.8-2.3-7.4-5.5 2.7-.9 5.2.3 5.2.3M12 20.2c3.7 0 6.8-2.3 7.4-5.5-2.7-.9-5.2.3-5.2.3" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Wellness</h3>
+          <p>Feel better. Be well.</p>
         </div>
-        <div class="stat reveal">
-          <span class="num">20+</span>
-          <span class="label">Sports supported</span>
+        <div class="pillar" data-pillar="connection">
+          <span class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="9" cy="8.6" r="3.1" stroke="currentColor" stroke-width="1.7"/><path d="M2.8 19c0-3.2 2.8-5.4 6.2-5.4s6.2 2.2 6.2 5.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="17.4" cy="9.8" r="2.4" stroke="currentColor" stroke-width="1.7"/><path d="M16.4 14.1c2.8 0 4.8 1.9 4.8 4.9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          </span>
+          <h3>Connection</h3>
+          <p>Connect, collaborate and belong.</p>
         </div>
-        <div class="stat reveal">
-          <span class="num">48 hrs</span>
-          <span class="label">Time to repair or replace</span>
+        <div class="pillar" data-pillar="exposure">
+          <span class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.6" stroke="currentColor" stroke-width="1.7"/><path d="M3.4 12h17.2" stroke="currentColor" stroke-width="1.7"/><path d="M12 3.4c2.4 2.5 3.6 5.4 3.6 8.6S14.4 18.1 12 20.6c-2.4-2.5-3.6-5.4-3.6-8.6S9.6 5.9 12 3.4Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Exposure</h3>
+          <p>See more. Imagine what's possible.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ================= SOLUTION ================= -->
+  <!-- ================= WHO WE SERVE ================= -->
   <section class="section">
     <div class="container">
       <div class="section-head reveal">
-        <span class="eyebrow">What We Offer</span>
-        <h2>Three ways to keep your sports infrastructure running</h2>
+        <span class="eyebrow">Who we work with</span>
+        <h2>Four audiences. Twenty experiences. One idea.</h2>
+        <p>Each programme is built for the people it serves — students finding their path, teams finding their rhythm, workplaces finding their culture.</p>
       </div>
-      <div class="grid grid-3">
-        <div class="card reveal">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.1-3.1a4 4 0 0 1-5.4 5.4L6 21H3v-3l9.6-9.6a4 4 0 0 1 5.4-5.4l-3.1 3.1Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-          </div>
-          <h3>Care</h3>
-          <p>We maintain the equipment you already own: audits, repairs, consumables.</p>
+
+      <div class="grid grid-4">
+
+        <a class="audience-card reveal" href="offerings.html#schools" data-pillar="growth">
+          <span class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 9.2 12 5l9 4.2-9 4.2-9-4.2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M6.5 11.2v4.2c0 1.6 2.5 2.8 5.5 2.8s5.5-1.2 5.5-2.8v-4.2M20.6 9.8v5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Schools</h3>
+          <span class="audience-line">Upgrading the education experience.</span>
+          <p>Learning experiences beyond the classroom, so students grow confidently and see the world around them.</p>
+          <ul class="audience-list">
+            <li>Startup Sprint</li>
+            <li>Future Skills Lab</li>
+            <li>Career Simulator</li>
+            <li>Scenario Learning</li>
+            <li>GrowWell</li>
+          </ul>
+          <span class="audience-cta">
+            See school offerings
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+
+        <a class="audience-card reveal" href="offerings.html#colleges" data-pillar="exposure">
+          <span class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 20.5V9.8l8-5.3 8 5.3v10.7" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M2.5 20.5h19" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M10 20.5V14h4v6.5" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Colleges</h3>
+          <span class="audience-line">From campus to what's next.</span>
+          <p>Experiences that make students industry-ready — real skills, real exposure, real confidence.</p>
+          <ul class="audience-list">
+            <li>OneStop Placements</li>
+            <li>Veterans Workshops</li>
+            <li>Campus Calm</li>
+            <li>Career Simulator</li>
+            <li>Sports Infra as a Service</li>
+          </ul>
+          <span class="audience-cta">
+            See college offerings
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+
+        <a class="audience-card reveal" href="offerings.html#young-firms" data-pillar="connection">
+          <span class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3c3 2 5 5.5 5 9.5L15 18H9l-2-5.5C7 8.5 9 5 12 3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="1.9" stroke="currentColor" stroke-width="1.7"/><path d="M9 18c-1 1-1.3 2-1.1 3 1 .2 2.1-.1 3.1-1.1M15 18c1 1 1.3 2 1.1 3-1 .2-2.1-.1-3.1-1.1" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Young Firms</h3>
+          <span class="audience-line">Happier teams. Stronger journeys.</span>
+          <p>Experiences that keep startup teams healthy, connected and inspired while you build what's next.</p>
+          <ul class="audience-list">
+            <li>YOPPI Buddy</li>
+            <li>YOPPI Fridays</li>
+            <li>Cultured-Us</li>
+            <li>YOPPI Impact</li>
+            <li>Offsite-in-a-Day</li>
+          </ul>
+          <span class="audience-cta">
+            See startup offerings
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+
+        <a class="audience-card reveal" href="offerings.html#gccs" data-pillar="imagine">
+          <span class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 20.5V6.2L12 3.5v17M12 20.5h8.5V9.8L12 7.2" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M6.6 8.6h2M6.6 12h2M6.6 15.4h2M15.4 12h2M15.4 15.4h2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          </span>
+          <h3>GCCs &amp; Captives</h3>
+          <span class="audience-line">People experiences that power performance.</span>
+          <p>Employee experiences that drive engagement, collaboration and wellbeing, at work and beyond.</p>
+          <ul class="audience-list">
+            <li>Calendar-as-a-Service</li>
+            <li>Inclusion Moments</li>
+            <li>YOPPI Care</li>
+            <li>AI Fluency Labs</li>
+            <li>YOPPI Impact</li>
+          </ul>
+          <span class="audience-cta">
+            See GCC offerings
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HOW WE WORK ================= -->
+  <section class="section section--alt">
+    <div class="container approach-grid">
+      <div class="reveal">
+        <span class="eyebrow">How we work</span>
+        <h2 style="font-size:clamp(1.75rem,3vw,2.4rem);margin-top:12px;">Start small. Prove it. Then scale.</h2>
+        <p style="margin-top:16px;color:var(--text-muted);font-size:1.05rem;">Every partnership starts with a conversation and ends with a programme designed around your people — never a template pulled off a shelf.</p>
+        <div class="hero-cta">
+          <a href="contact.html" class="btn btn-primary">Start the conversation</a>
         </div>
-        <div class="card reveal">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M4 7h13l-2.5-2.5M20 17H7l2.5 2.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="approach-list reveal">
+        <div class="approach-row">
+          <span class="step-num">1</span>
+          <div>
+            <h4>Meet the founders</h4>
+            <p>We listen first — your goals, your challenges, your culture.</p>
           </div>
-          <h3>Lease</h3>
-          <p>We supply brand-new gear as a subscription. Zero capex, always match-ready.</p>
         </div>
-        <div class="card reveal">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><rect x="9" y="3" width="6" height="4" rx="1" stroke="currentColor" stroke-width="1.6"/><path d="m9 13 2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="approach-row">
+          <span class="step-num">2</span>
+          <div>
+            <h4>Design a specific plan</h4>
+            <p>A programme built around your students or your teams and what matters most to them.</p>
           </div>
-          <h3>Asset Management</h3>
-          <p>You own the assets; we run a full annual maintenance contract with SLAs.</p>
+        </div>
+        <div class="approach-row">
+          <span class="step-num">3</span>
+          <div>
+            <h4>Run a pilot</h4>
+            <p>Experience YOPPI in practice, with real participation and real feedback.</p>
+          </div>
+        </div>
+        <div class="approach-row">
+          <span class="step-num">4</span>
+          <div>
+            <h4>Launch and scale</h4>
+            <p>Bring the experiences to life across the institution, and measure impact along the way.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ================= FINAL CTA ================= -->
+  <!-- ================= BELIEF ================= -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="note-block reveal">
+        <div>
+          <h3>Our belief</h3>
+          <p class="panel-quote-mark" style="font-size:1.3rem;font-weight:700;line-height:1.4;color:var(--navy-950);">Great places are built by people who care.</p>
+          <p style="margin-top:14px;">At YOPPI, we believe meaningful experiences create happier people, stronger teams and a lasting impact — not just at work or in class, but in the world around us.</p>
+          <p class="note-sign">— Founded by alumni of IIT Roorkee, IIT Kharagpur &amp; ISB</p>
+        </div>
+        <div class="note-steps">
+          <h3>What that looks like</h3>
+          <div class="steps">
+            <div class="step">
+              <span class="step-num">1</span>
+              <h4>Designed, not booked</h4>
+              <p>Every experience is shaped around your context, not sold as a package.</p>
+            </div>
+            <div class="step">
+              <span class="step-num">2</span>
+              <h4>End to end</h4>
+              <p>Planning, vendors, logistics and facilitation — we handle all of it.</p>
+            </div>
+            <div class="step">
+              <span class="step-num">3</span>
+              <h4>Measured</h4>
+              <p>Participation, wellbeing and outcomes you can show your leadership.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
   <section class="section cta-section">
     <div class="container cta-inner reveal">
-      <h2>Every institution deserves uninterrupted access to quality sports infrastructure.</h2>
-      <p>We make that possible. Play. We'll handle the rest.</p>
+      <h2>Let's create brighter tomorrows.</h2>
+      <p>Tell us about your school, campus or company — we'll come back with ideas worth trying.</p>
+      <div class="cta-numbers">
+        <a href="https://wa.me/918670990985" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.02a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 5.83 2.42 8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Z"/></svg>
+          +91 86709 90985
+        </a>
+        <a href="https://wa.me/918979484758" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.02a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 5.83 2.42 8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Z"/></svg>
+          +91 89794 84758
+        </a>
+      </div>
       <div class="hero-cta" style="justify-content:center;">
-        <a href="signup.html" class="btn btn-primary btn-lg">Sign Up Your Institution</a>
-        <a href="contact.html" class="btn btn-secondary btn-lg">Talk to Us</a>
+        <a href="offerings.html" class="btn btn-light btn-lg">Explore Offerings</a>
+        <a href="contact.html" class="btn btn-secondary btn-lg">Contact Us</a>
       </div>
     </div>
   </section>
@@ -152,38 +354,38 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="brand">
-          <img src="assets/images/yoppi-icon.png" alt="MatchGrade" />
-          <span class="brand-name">MatchGrade</span>
+          <img src="assets/images/yoppi-icon-512.png?v=4" alt="" width="46" height="46" />
+          <span class="brand-name">YOPPI</span>
         </a>
-        <p>Every Asset | Every Game | Anytime. The operating system for institutional sports.</p>
+        <p>Experiences for a brighter tomorrow — built around growth, wellness, connection and exposure.</p>
       </div>
       <div class="footer-col">
-        <h4>Platform</h4>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services/Plans</a>
-        <a href="dashboard.html" data-login-trigger>Login</a>
-        <a href="signup.html">Sign Up</a>
+        <h4>Offerings</h4>
+        <a href="offerings.html#schools">For Schools</a>
+        <a href="offerings.html#colleges">For Colleges</a>
+        <a href="offerings.html#young-firms">For Young Firms</a>
+        <a href="offerings.html#gccs">For GCCs &amp; Captives</a>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
+        <a href="index.html">Home</a>
+        <a href="offerings.html">All Offerings</a>
         <a href="contact.html">Contact Us</a>
-        <a href="services.html">Essential · Plus · Elite</a>
       </div>
       <div class="footer-col">
         <h4>Get in touch</h4>
-        <li>founder@yoppi.in</li>
-        <li>+91 89794 84758</li>
+        <a href="https://wa.me/918670990985" target="_blank" rel="noopener">WhatsApp +91 86709 90985</a>
+        <a href="https://wa.me/918979484758" target="_blank" rel="noopener">WhatsApp +91 89794 84758</a>
+        <a href="mailto:founder@yoppi.in">founder@yoppi.in</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <span data-year></span> MatchGrade. All rights reserved.</span>
-      <span>Confidential · Sports Infrastructure as a Service</span>
+      <span>© <span data-year></span> YOPPI. All rights reserved.</span>
+      <span class="footer-tag">Happy people. Brighter tomorrows.</span>
     </div>
   </div>
 </footer>
 
-<script src="assets/js/yoppi-config.js" defer></script>
-<script type="module" src="assets/js/yoppi-client.js"></script>
 <script src="assets/js/main.js" defer></script>
 </body>
 </html>

@@ -1,63 +1,78 @@
-/* YOPPI — contact form, wired to the Supabase backend via window.Yoppi (see yoppi-client.js) */
+/* YOPPI — contact form. There is no backend: the form composes the enquiry and
+   hands it to WhatsApp (primary) or the visitor's mail client (fallback). */
 (function () {
   var form = document.getElementById('contact-form');
-  var status = document.getElementById('form-status');
   if (!form) return;
 
-  var ROLE_VALUES = {
-    'Sports Head / PE Teacher': 'sports_head_pe_teacher',
-    'Facilities / Admin Manager': 'facilities_admin_manager',
-    'Principal / Director': 'principal_director',
-    'HR / Corporate Wellness': 'hr_corporate_wellness',
-    'Vendor Partner': 'vendor_partner',
-    'Other': 'other'
-  };
+  var status = document.getElementById('form-status');
+  var mailLink = document.getElementById('contact-mail-link');
+  var WHATSAPP_NUMBER = '918670990985';
+  var EMAIL = 'founder@yoppi.in';
 
-  var submitBtn = form.querySelector('button[type="submit"]');
-  var captcha = null;
-
-  window.Yoppi.renderHcaptcha('contact-hcaptcha').then(function (handle) {
-    captcha = handle;
-  }).catch(function (err) {
-    console.error('hCaptcha failed to load', err);
-    status.textContent = 'Could not load spam protection — please refresh the page.';
-    status.style.color = 'var(--error, #c0392b)';
-  });
+  function value(name) {
+    var el = form.elements[name];
+    return el ? el.value.trim() : '';
+  }
 
   function setStatus(message, isError) {
+    if (!status) return;
     status.textContent = message;
-    status.style.color = isError ? 'var(--error, #c0392b)' : 'var(--accent)';
+    status.style.color = isError ? 'var(--error)' : 'var(--accent)';
   }
+
+  function missingField() {
+    var required = [
+      ['name', 'your name'],
+      ['org', 'your organisation'],
+      ['email', 'your work email']
+    ];
+    for (var i = 0; i < required.length; i++) {
+      if (!value(required[i][0])) return required[i][1];
+    }
+    return null;
+  }
+
+  function compose() {
+    var lines = [
+      'Hi YOPPI — I would like to know more.',
+      '',
+      'Name: ' + value('name'),
+      'Organisation: ' + value('org'),
+      'Type: ' + value('audience'),
+      'Role: ' + value('role'),
+      'Email: ' + value('email')
+    ];
+    if (value('phone')) lines.push('Phone: ' + value('phone'));
+    if (value('interest')) lines.push('Interested in: ' + value('interest'));
+    if (value('message')) lines.push('', value('message'));
+    return lines.join('\n');
+  }
+
+  function refreshMailLink() {
+    if (!mailLink) return;
+    mailLink.href =
+      'mailto:' + EMAIL +
+      '?subject=' + encodeURIComponent('YOPPI enquiry — ' + (value('org') || 'new enquiry')) +
+      '&body=' + encodeURIComponent(compose());
+  }
+
+  form.addEventListener('input', refreshMailLink);
+  refreshMailLink();
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    var token = captcha && captcha.getResponse();
-    if (!token) {
-      setStatus('Please complete the captcha before sending.', true);
+    var missing = missingField();
+    if (missing) {
+      setStatus('Please add ' + missing + ' so we know who to reply to.', true);
       return;
     }
 
-    submitBtn.disabled = true;
-    setStatus('Sending…', false);
-
-    window.Yoppi.submitContact({
-      name: form.name.value.trim(),
-      org: form.org.value.trim(),
-      email: form.email.value.trim(),
-      phone: form.phone.value.trim(),
-      role: ROLE_VALUES[form.role.value] || null,
-      message: form.message.value.trim() || null,
-      hcaptchaToken: token
-    }).then(function () {
-      setStatus('Thanks — we’ve received your message and will respond within one business day.', false);
-      form.reset();
-    }).catch(function (err) {
-      console.error('submitContact failed', err);
-      setStatus(err.message || 'Something went wrong — please try again.', true);
-    }).finally(function () {
-      submitBtn.disabled = false;
-      if (captcha) captcha.reset();
-    });
+    window.open(
+      'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(compose()),
+      '_blank',
+      'noopener'
+    );
+    setStatus('Opening WhatsApp with your message ready to send. Not working? Use the email link below.', false);
   });
 })();
